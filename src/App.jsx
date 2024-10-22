@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ThemeProvider } from './contexts/Theme'
 import ThemeBtn from './components/ThemeBtn'
+import Card from './components/Card';
 
 const App = () => {
 
@@ -22,12 +23,12 @@ const App = () => {
   return (
     <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
       <div className='grid place-items-center w-full h-screen'>
-        <div>
+        <div className='w-full max-w-sm mx-auto flex justify-end'>
           <ThemeBtn />
         </div>
 
-        <div>
-          {/* <Card /> */}
+        <div className='w-full max-w-sm mx-auto'>
+          <Card />
         </div>
       </div>
     </ThemeProvider>
